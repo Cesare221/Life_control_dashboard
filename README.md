@@ -86,7 +86,7 @@ fly deploy
 
 - [`src/App.jsx`](./src/App.jsx) concentra os dados e o estado principal do painel
 - [`src/styles.css`](./src/styles.css) controla a identidade visual e os ajustes responsivos
-- [`public/logoportifolio.PNG`](./public/logoportifolio.PNG) é a logo usada no cabeçalho
+- [`public/logo-appicon.png`](./public/logo-appicon.png) é a logo usada no cabeçalho e no favicon
 - [`background.png`](./background.png) é o background do projeto
 
 ## Observações
