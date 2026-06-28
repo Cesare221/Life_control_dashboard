@@ -12,6 +12,9 @@ O progresso fica salvo no navegador de forma simples, sem login, para deixar o u
 - Tema com apoio à preferência do sistema
 - Layout preparado para uso pessoal no navegador, Docker e Fly.io
 
+## Live Demo:
+https://meu-painel-pessoal.fly.dev
+
 ## Tecnologias
 
 - React
