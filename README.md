@@ -1,44 +1,40 @@
-# Meu Painel Pessoal
+# Life Dashboard
 
-Um painel de vida leve, visual e local para acompanhar hábitos, sono, água, passos, finanças e memórias diárias em um só lugar.
+Painel pessoal para acompanhar habitos, sono, agua, passos, despesas e memoria diaria em uma interface simples, leve e responsiva.
 
-O progresso fica salvo no navegador de forma simples, sem login, para deixar o uso mais direto.
+[![Demo](https://img.shields.io/badge/Demo-online-2563EB?style=for-the-badge&logo=flydotio&logoColor=white)](https://meu-painel-pessoal.fly.dev/)
+[![React](https://img.shields.io/badge/Frontend-React-111827?style=for-the-badge&logo=react&logoColor=61DAFB)](#stack)
+[![Vite](https://img.shields.io/badge/Build-Vite-111827?style=for-the-badge&logo=vite&logoColor=646CFF)](#stack)
+[![Docker](https://img.shields.io/badge/Deploy-Docker-111827?style=for-the-badge&logo=docker&logoColor=2496ED)](#deploy)
 
-## Destaques
+## Visao Geral
 
-- Perfil com nome, sobrenome e altura
-- Memória diária para acompanhar métricas com o passar do tempo
-- Hábitos, água, sono, passos e despesas em uma interface compacta
-- Tema com apoio à preferência do sistema
-- Layout preparado para uso pessoal no navegador, Docker e Fly.io
+O Life Dashboard foi desenvolvido para reunir em um unico lugar informacoes que normalmente ficam espalhadas entre varios aplicativos, planilhas e anotacoes.
 
-## Live Demo:
-https://meu-painel-pessoal.fly.dev
+A ideia central do projeto e oferecer uma visao pessoal da rotina com acesso rapido, persistencia local e navegacao simples direto no navegador.
 
-## Tecnologias
+## O que o sistema faz
+
+- registra habitos e progresso diario;
+- acompanha agua, sono, passos e despesas;
+- guarda memoria diaria;
+- salva os dados no navegador;
+- funciona sem login;
+- pode ser executado localmente ou publicado com Docker e Fly.io.
+
+## Stack
 
 - React
 - Vite
 - Docker
 - Nginx
 - Fly.io
+- armazenamento local no navegador
 
-## Pré-requisitos
-
-- Node.js 18+
-- `flyctl` instalado e autenticado, se for publicar no Fly
-
-## Configuração local
-
-1. Instale as dependências.
+## Como rodar localmente
 
 ```bash
 npm install
-```
-
-2. Inicie o app.
-
-```bash
 npm run dev
 ```
 
@@ -50,49 +46,59 @@ npm run build
 
 ## Docker
 
-Build da imagem:
-
 ```bash
 docker build -t meu-painel-pessoal .
-```
-
-Executando o container:
-
-```bash
 docker run --rm -p 8080:8080 meu-painel-pessoal
 ```
 
 Depois acesse:
 
-```bash
+```text
 http://localhost:8080
 ```
 
-## Fly.io
+## Deploy
 
-O projeto já está pronto para deploy com `fly.toml` e `Dockerfile`.
-
-Fluxo recomendado:
+O projeto esta pronto para deploy com `Dockerfile` e `fly.toml`.
 
 ```bash
 fly launch
 fly deploy
 ```
 
-Se o app já existir, basta publicar novamente:
-
-```bash
-fly deploy
-```
-
 ## Estrutura principal
 
-- [`src/App.jsx`](./src/App.jsx) concentra os dados e o estado principal do painel
-- [`src/styles.css`](./src/styles.css) controla a identidade visual e os ajustes responsivos
-- [`public/logo-appicon.png`](./public/logo-appicon.png) é a logo usada no cabeçalho e no favicon
-- [`background.png`](./background.png) é o background do projeto
+```text
+life-dashboard/
+  src/App.jsx
+  src/main.jsx
+  src/styles.css
+  public/
+  Dockerfile
+  fly.toml
+```
 
-## Observações
+## Objetivo do projeto
 
-- Os dados ficam salvos no armazenamento do navegador.
-- Se quiser, o próximo passo natural é adicionar exportação de dados ou histórico em CSV.
+Este projeto faz parte do meu portfolio como exemplo de dashboard pessoal e produto orientado a rotina. Ele foi desenvolvido para demonstrar:
+
+- organizacao de informacao em interface compacta;
+- experiencia de uso pessoal sem depender de backend;
+- consistencia visual em painel de acompanhamento;
+- deploy simples de uma aplicacao frontend containerizada.
+
+## Demo
+
+- Aplicacao online: https://meu-painel-pessoal.fly.dev/
+
+## Repositorio
+
+- Codigo: https://github.com/Cesare221/Life_control_dashboard
+
+## Contato
+
+- Portfolio: https://cesarddev.com.br/
+- GitHub: https://github.com/Cesare221
+- LinkedIn: https://linkedin.com/in/cdelmondes
+
+Se este projeto fizer sentido para o seu contexto, fico a disposicao para conversar sobre dashboards, UX e organizacao de informacao.
